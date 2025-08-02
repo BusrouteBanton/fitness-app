@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-gray-20: #f8f4eb;
+  --color-gray-50: #efe6e6;
+  --color-gray-100: #dfcccc;
+  --color-gray-500: #5e0000;
+  --color-primary-100: #ffe1e0;
+  --color-primary-300: #ffa6a3;
+  --color-primary-500: #ff6b66;
+  --color-secondary-400: #ffcd5b;
+  --color-secondary-500: #ffc132;
+
+  --font-dmsans: "DM Sans", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1060px;
+
+  --image-evolvetext: url("./assets/EvolveText.png");
+  --image-abstractwaves: url("./assets/AbstractWaves.png");
+  --image-sparkles: url("./assets/Sparkles.png");
+  --image-circles: url("./assets/Circles.png");
+
+  --gradient-yellowred: linear-gradient(90deg, #ff616a 0%, #ffc837 100%);
+  --image-mobile-home: url("./assets/HomePageGraphic.png");
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-screen min-h-screen w-screen overflow-x-hidden;
+
+    font-family: var(--font-dmsans);
+    background-color: var(--color-gray-20);
+    color: var(--color-gray-500);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
