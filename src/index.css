@@ -47,15 +47,88 @@
 }
 
 @layer components {
-  .with-evolve-before::before {
+  .with-before-image::before {
     content: "";
     position: absolute;
     top: -4rem;
     left: -4rem;
-    background-image: var(--image-evolvetext);
+    width: 80%; /* full viewport width */
+    height: auto;
+    aspect-ratio: 3 / 1; /* optional, tweak based on your image shape */
+    background-image: url("./assets/EvolveText.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
     pointer-events: none;
+  }
+}
+
+@media (min-width: 1061px) {
+  .with-before-image::before {
+    display: block;
+  }
+}
+
+@media (max-width: 1060px) {
+  .with-before-image::before {
+    display: none;
+  }
+}
+
+@layer components {
+  .with-waves-image::before {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: -4rem;
+    width: 200px; /* full viewport width */
+    height: auto;
+    aspect-ratio: 3 / 1; /* optional, tweak based on your image shape */
+    background-image: url("./assets/AbstractWaves.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 1061px) {
+  .with-waves-image::before {
+    display: block;
+  }
+}
+
+@media (max-width: 1060px) {
+  .with-waves-image::before {
+    display: none;
+  }
+}
+
+@layer components {
+  .with-sparkles-image::before {
+    content: "";
+    position: absolute;
+    bottom: -4rem;
+    right: -4rem;
+    width: 200px; /* full viewport width */
+    height: auto;
+    aspect-ratio: 3 / 1; /* optional, tweak based on your image shape */
+    background-image: url("./assets/Sparkles.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 1061px) {
+  .with-sparkles-image::before {
+    display: block;
+  }
+}
+
+@media (max-width: 1060px) {
+  .with-sparkles-image::before {
+    display: none;
   }
 }
